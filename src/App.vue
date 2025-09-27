@@ -160,7 +160,7 @@
         </div>
       </v-container>
     </v-main>
-    <div id="design" ref="design" class="full-width full-height" style="background-image: url('https://cdn.statically.io/gh/matt1484/pokemon-unite-designer/master/public/img/background.png'); background-size: 1650px 900px;">
+    <div id="design" ref="design" class="full-width full-height" style="background-image: url('https://cdn.statically.io/gh/MicDeVilla/pokemon-unite-designer/master/public/img/background.png'); background-size: 1650px 900px;">
       <div class="full-width ma-5">
         <v-row dense>
           <v-col cols="4">
@@ -230,7 +230,7 @@
                   <v-icon color="primary" style="margin-top: 35px">{{icons.mdiChevronRightCircle}}</v-icon>
                 </v-col>
                 <v-col cols="auto" :key="`evolution-${index}-img`">
-                  <div style="background-image: url('https://cdn.statically.io/gh/matt1484/pokemon-unite-designer/master/public/img/level.png'); background-size: contain; position: relative; height: 134px;" class="fill-width">
+                  <div style="background-image: url('https://cdn.statically.io/gh/MicDeVilla/pokemon-unite-designer/master/public/img/level.png'); background-size: contain; position: relative; height: 134px;" class="fill-width">
                     <img :src="`${imageUrl}${evo.id}.png`" contain style="padding-left:10%; max-width: 110px" />
                     <div style="position: absolute; bottom: 0; padding-left: 60px; padding-bottom: 17px; color: white; font-size: 12px; font-weight: 800" >
                       {{evolutions[index]}}
@@ -273,7 +273,7 @@
                 <v-card class="mr-3" outlined shaped elevation="2">
                   <v-toolbar shaped :class="moves[0].move.type" style="color: white; border-bottom-right-radius: 0" elevation="1" dense>
                     <v-avatar color="white" size="32" class="mr-2">
-                      <img v-if="moves[0].move.type" :src="`https://cdn.statically.io/gh/matt1484/pokemon-unite-designer/master/public/img/${moves[0].move.type}.webp`" />
+                      <img v-if="moves[0].move.type" :src="`https://cdn.statically.io/gh/MicDeVilla/pokemon-unite-designer/master/public/img/${moves[0].move.type}.webp`" />
                     </v-avatar>
                     <div style="margin-top: -8px">
                       <h3 style="padding: none !important">{{moves[0].move.name}}</h3>
@@ -394,7 +394,7 @@
                         </v-col>
                         <v-col :key="`move-0-option-${index}-tool`" :class="`v-toolbar__content ma-0 pa-0  ${option.move.type}`">
                           <v-avatar color="white" size="32" class="mr-2">
-                            <img v-if="option.move.type" :src="`https://cdn.statically.io/gh/matt1484/pokemon-unite-designer/master/public/img/${option.move.type}.webp`" />
+                            <img v-if="option.move.type" :src="`https://cdn.statically.io/gh/MicDeVilla/pokemon-unite-designer/master/public/img/${option.move.type}.webp`" />
                           </v-avatar>
                           <div style="margin-top: -8px">
                             <h3 style="padding: none !important">{{option.move.name}}</h3>
@@ -485,7 +485,7 @@
                 <v-card outlined shaped elevation="2" class="mr-3">
                   <v-toolbar shaped :class="moves[1].move.type" style="color: white; border-bottom-right-radius: 0" elevation="1" dense>
                     <v-avatar color="white" size="32" class="mr-2">
-                      <img v-if="moves[1].move.type" :src="`https://cdn.statically.io/gh/matt1484/pokemon-unite-designer/master/public/img/${moves[1].move.type}.webp`" />
+                      <img v-if="moves[1].move.type" :src="`https://cdn.statically.io/gh/MicDeVilla/pokemon-unite-designer/master/public/img/${moves[1].move.type}.webp`" />
                     </v-avatar>
                     <div style="margin-top: -8px">
                       <h3 style="padding: none !important">{{moves[1].move.name}}</h3>
@@ -607,7 +607,7 @@
                         </v-col>
                         <v-col :key="`move-1-option-${index}-tool`" :class="`v-toolbar__content ma-0 pa-0  ${option.move.type}`">
                           <v-avatar color="white" size="32" class="mr-2">
-                            <img v-if="option.move.type" :src="`https://cdn.statically.io/gh/matt1484/pokemon-unite-designer/master/public/img/${option.move.type}.webp`" />
+                            <img v-if="option.move.type" :src="`https://cdn.statically.io/gh/MicDeVilla/pokemon-unite-designer/master/public/img/${option.move.type}.webp`" />
                           </v-avatar>
                           <div style="margin-top: -8px">
                             <h3 style="padding: none !important">{{option.move.name}}</h3>
@@ -851,7 +851,7 @@ export default {
     } 
   },
   created() {
-    axios.get('https://raw.githubusercontent.com/matt1484/pokemon-unite-designer/master/public/data/all-pokemon.json').then((resp) => {
+    axios.get('https://raw.githubusercontent.com/MicDeVilla/pokemon-unite-designer/master/public/data/all-pokemon.json').then((resp) => {
       this.pokemonOptions = resp.data.map((pkmn) => {
         return {
           value: pkmn.id,
@@ -883,7 +883,7 @@ export default {
       }).catch(() => {
         this.imageUrl = 'https://cdn.statically.io/gh/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
       });
-      axios.get(`https://raw.githubusercontent.com/matt1484/pokemon-unite-designer/master/public/data/pokemon/${this.pokemon.id}.json`).then((resp) => {
+      axios.get(`https://raw.githubusercontent.com/MicDeVilla/pokemon-unite-designer/master/public/data/pokemon/${this.pokemon.id}.json`).then((resp) => {
         resp.data.abilities = resp.data.abilities.map((ab) => { return { value: ab, text: ab }})
         resp.data.moves = resp.data.moves.map((mv) => { return { value: mv, text: mv.name }})
         this.pokemon = resp.data
@@ -1072,7 +1072,7 @@ background: rgb(240, 240, 240) 0 292px !important;
   /* transform: rotateY(0deg) rotate(10deg);  */
 }
 .character-card.attacker {
-  background-image: url("https://cdn.statically.io/gh/matt1484/pokemon-unite-designer/master/public/img/attacker.png");
+  background-image: url("https://cdn.statically.io/gh/MicDeVilla/pokemon-unite-designer/master/public/img/attacker.png");
   /* background-image: conic-gradient(
     from -55deg,
     darkorange 0deg 20deg,
@@ -1084,7 +1084,7 @@ background: rgb(240, 240, 240) 0 292px !important;
     orange) !important; */
 }
 .character-card.speedster {
-  background-image: url("https://cdn.statically.io/gh/matt1484/pokemon-unite-designer/master/public/img/speedster.png");
+  background-image: url("https://cdn.statically.io/gh/MicDeVilla/pokemon-unite-designer/master/public/img/speedster.png");
   /* background-image: conic-gradient(
     from -55deg,
     deepskyblue 0deg 20deg,
@@ -1096,7 +1096,7 @@ background: rgb(240, 240, 240) 0 292px !important;
     dodgerblue) !important; */
 }
 .character-card.defender {
-  background-image: url("https://cdn.statically.io/gh/matt1484/pokemon-unite-designer/master/public/img/defender.png");
+  background-image: url("https://cdn.statically.io/gh/MicDeVilla/pokemon-unite-designer/master/public/img/defender.png");
   /* background-image: conic-gradient(
     from -55deg,
     lawngreen 0deg 20deg,
@@ -1108,7 +1108,7 @@ background: rgb(240, 240, 240) 0 292px !important;
     palegreen) !important; */
 }
 .character-card.all-rounder {
-  background-image: url("https://cdn.statically.io/gh/matt1484/pokemon-unite-designer/master/public/img/all-rounder.png");
+  background-image: url("https://cdn.statically.io/gh/MicDeVilla/pokemon-unite-designer/master/public/img/all-rounder.png");
   /* background-image: conic-gradient(
     from -55deg,
     mediumpurple 0deg 20deg,
@@ -1120,7 +1120,7 @@ background: rgb(240, 240, 240) 0 292px !important;
     mediumorchid) !important; */
 }
 .character-card.support {
-  background-image: url("https://cdn.statically.io/gh/matt1484/pokemon-unite-designer/master/public/img/support.png");
+  background-image: url("https://cdn.statically.io/gh/MicDeVilla/pokemon-unite-designer/master/public/img/support.png");
   /* background-image: conic-gradient(
     from -55deg,
     rgb(254, 246, 0) 0deg 20deg,
