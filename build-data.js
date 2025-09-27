@@ -63,7 +63,7 @@ axios.get('https://raw.githubusercontent.com/smogon/pokemon-showdown/master/data
             pkmn.num <= 0 || !idConversionMap[normalize(nameToPkmn[pkmn.name].id)] || 
             // ((pkmn.tags || []).concat((nameToPkmn[pkmn.baseSpecies || ''] || {}).tags || [])).join('').toLowerCase().match(/legendary/) || 
             (pkmn.forme || '').toLowerCase().match(nameExcludes) //|| pkmn.name.toLowerCase().match(/arceus/)
-			|| pkmn.type == undefined
+			|| pkmn.types == undefined
           ) {
             return
           }
