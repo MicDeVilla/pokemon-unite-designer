@@ -46,7 +46,7 @@
           <v-divider class="my-3" />
           <v-row>
             <v-col>
-              <v-textarea label="Basic Attack Description" v-model="basicDescription" dense outlined no-resize :counter="370" maxlength="370" />
+              <v-textarea label="Basic Attack Description" v-model="basicDescription" dense outlined no-resize :counter="800" maxlength="800" />
             </v-col>
           </v-row>
           <v-divider class="my-3" />
@@ -57,7 +57,7 @@
           </v-row>
           <v-row dense>
             <v-col>
-              <v-textarea label="Ability Description" v-model="ability.description" dense no-resize outlined :counter="280" maxlength="280" />
+              <v-textarea label="Ability Description" v-model="ability.description" dense no-resize outlined :counter="900" maxlength="900" />
             </v-col>
           </v-row>
           <v-divider class="my-3" />
@@ -77,7 +77,7 @@
             </v-row>
             <v-row dense :key="`move-${index}-desc`">
               <v-col>
-                <v-textarea :label="`Move ${index + 1} Description`" v-model="m.description" dense no-resize outlined :counter="370" maxlength="370" />
+                <v-textarea :label="`Move ${index + 1} Description`" v-model="m.description" dense no-resize outlined :counter="800" maxlength="800" />
               </v-col>
             </v-row>
             <template v-for="(o, i) in m.options">
@@ -96,7 +96,7 @@
               </v-row>
               <v-row dense :key="`move-${index}-option-${i}-desc`">
                 <v-col>
-                  <v-textarea :label="`Move ${index+1} Option ${i+1} Description`" v-model="o.description" dense no-resize outlined :counter="370" maxlength="370" />
+                  <v-textarea :label="`Move ${index+1} Option ${i+1} Description`" v-model="o.description" dense no-resize outlined :counter="900" maxlength="900" />
                 </v-col>
               </v-row>
             </template>
@@ -109,7 +109,7 @@
           </v-row>
           <v-row dense>
             <v-col>
-              <v-textarea label="Unite Move Description" v-model="uniteMove.description" dense no-resize outlined :counter="370" maxlength="370" />
+              <v-textarea label="Unite Move Description" v-model="uniteMove.description" dense no-resize outlined :counter="800" maxlength="800" />
             </v-col>
           </v-row>
           <v-divider class="my-3" />
@@ -163,7 +163,7 @@
     <div id="design" ref="design" class="full-width full-height" style="background-image: url('https://cdn.statically.io/gh/MicDeVilla/pokemon-unite-designer/master/public/img/background.png'); background-size: 1650px 900px;">
       <div class="full-width ma-5">
         <v-row dense>
-          <v-col cols="4">
+          <v-col cols="3">
             <v-row>
               <v-col>
                 <v-toolbar color="primary" dense shaped class="mb-2">
@@ -198,19 +198,19 @@
             <v-row dense class="mt-5">
               <v-col cols="auto">
                 <v-chip color="primary" label>
-                  <div class="text-center" style="color:white; width: 100px; font-size: 14px">{{attackType}}</div>
+                  <div class="text-center" style="color:white; width: 100px; font-size: 12px">{{attackType}}</div>
                 </v-chip>
               </v-col>
               <v-col></v-col>
               <v-col cols="auto">
                 <v-chip color="primary" label>
-                  <div class="text-center" style="color:white; width: 100px; font-size: 14px">{{range}}</div>
+                  <div class="text-center" style="color:white; width: 100px; font-size: 12px">{{range}}</div>
                 </v-chip>
               </v-col>
               <v-col></v-col>
               <v-col  cols="auto">
                 <v-chip color="primary" label>
-                  <div class="text-center" style="color:white; width: 100px; font-size: 14px">{{role}}</div>
+                  <div class="text-center" style="color:white; width: 100px; font-size: 12px">{{role}}</div>
                 </v-chip>
               </v-col>
             </v-row>
@@ -218,7 +218,7 @@
               <v-col></v-col>
               <v-col cols="auto">
                 <v-chip color="primary" label>
-                  <div class="text-center" style="color:white; width: 150px; font-size: 14px">Difficulty: {{difficulty}}</div>
+                  <div class="text-center" style="color:white; width: 150px; font-size: 12px">Difficulty: {{difficulty}}</div>
                 </v-chip>
               </v-col>
               <v-col></v-col>
@@ -252,8 +252,8 @@
           <v-col cols="auto">
             <v-divider vertical class="ml-5 mr-4" color="black" />
           </v-col>
-          <v-col style="width: 1000px !important">
-            <v-row dense class="mb-2" style="max-width: 1000px !important">
+          <v-col style="width: 1200px !important">
+            <v-row dense class="mb-2" style="max-width: 1200px !important">
               <v-col>
                 <v-card outlined shaped elevation="2">
                   <v-toolbar shaped color="primary" style="color: white; border-bottom-right-radius: 0" elevation="1" dense>
@@ -262,78 +262,78 @@
                     </v-avatar>
                     <h3 style="padding: none !important">Ability: {{ability.name.value || ability.name}}</h3>
                   </v-toolbar>
-                  <div style="height: 3em; font-size: 14px; line-height: 15px" class="pa-2">
+                  <div style="height: 5em; font-size: 12px; line-height: 12px" class="pa-2">
                     {{ability.description}}
                   </div>
                 </v-card>
               </v-col>
             </v-row>
             <v-row dense>
-              <v-col style="max-width: 495px !important">
+              <v-col style="max-width: 595px !important">
                 <v-card class="mr-3" outlined shaped elevation="2">
                   <v-toolbar shaped :class="moves[0].move.type" style="color: white; border-bottom-right-radius: 0" elevation="1" dense>
                     <v-avatar color="white" size="32" class="mr-2">
                       <img v-if="moves[0].move.type" :src="`https://cdn.statically.io/gh/MicDeVilla/pokemon-unite-designer/master/public/img/${moves[0].move.type}.webp`" />
                     </v-avatar>
                     <div style="margin-top: -8px">
-                      <h3 style="padding: none !important">{{moves[0].move.name}}</h3>
+                      <h3 style="padding: none !important">Move 1: {{moves[0].move.name}}</h3>
                       <div style="height: 20px; margin-top: -8px; margin-bottom: 4px !important">
                         <v-chip color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon small class="pb-1">{{icons.mdiTimerOutline}}</v-icon>
                             {{moves[0].cooldown}}s
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[0].tags.includes('Melee')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon x-small class="pb-1">{{icons.mdiHandFrontLeftOutline}}</v-icon>
                             Melee
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[0].tags.includes('Ranged')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon x-small class="pb-1">{{icons.mdiBowArrow}}</v-icon>
                             Ranged
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[0].tags.includes('Area')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon x-small class="pb-1">{{icons.mdiArrowExpandAll}}</v-icon>
                             Area
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[0].tags.includes('Buff')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon x-small class="pb-1">{{icons.mdiChevronDoubleUp}}</v-icon>
                             Buff
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[0].tags.includes('Debuff')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon small class="pb-1">{{icons.mdiChevronDoubleDown}}</v-icon>
                             Debuff
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[0].tags.includes('Dash')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon small class="pb-1">{{icons.mdiShare}}</v-icon>
                             Dash
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[0].tags.includes('Hindrance')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon small class="pb-1">{{icons.mdiLinkVariant}}</v-icon>
                             Hindrance
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[0].tags.includes('Recovery')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon small class="pb-1">{{icons.mdiBottleTonicPlusOutline}}</v-icon>
                             Recovery
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[0].tags.includes('Sure Hit')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon small class="pb-1">{{icons.mdiTarget}}</v-icon>
                             Sure Hit
                           </div>
@@ -341,12 +341,12 @@
                       </div>
                     </div>
                   </v-toolbar>
-                  <div style="height: 7em; font-size: 14px !important; line-height: 15px" class="pa-2">
+                  <div style="height: 10em; font-size: 12px !important; line-height: 12px" class="pa-2">
                     {{moves[0].description}}
                   </div>
                 </v-card>
               </v-col>
-              <v-col style="max-width: 495px !important">
+              <v-col style="max-width: 595px !important">
                 <v-card class="ml-3" outlined shaped elevation="2">
                   <v-toolbar shaped color="primary" style="color: white; border-bottom-right-radius: 0" elevation="1" dense>
                     <v-avatar color="white" size="32" class="mr-2">
@@ -356,39 +356,17 @@
                     </v-avatar>
                     <h3 style="padding: none !important">Basic Attack</h3>
                   </v-toolbar>
-                  <div style="height: 7em; font-size: 14px !important; line-height: 15px" class="pa-2">
+                  <div style="height: 10em; font-size: 12px !important; line-height: 12px" class="pa-2">
                     {{basicDescription}}
                   </div>
                 </v-card>
               </v-col>
             </v-row>
             <v-row dense>
-              <v-col></v-col>
-              <v-col cols="auto">
-                <v-avatar size="30" color="primary">
-                  <v-icon class="text-center" style="color: white">{{icons.mdiChevronDoubleDown}}</v-icon>
-                </v-avatar>
-              </v-col>
-              <v-col></v-col>
-              <v-col cols="auto">
-                <v-avatar size="30" color="primary">
-                  <v-icon class="text-center" style="color: white">{{icons.mdiChevronDoubleDown}}</v-icon>
-                </v-avatar>
-              </v-col>
-              <v-col></v-col>
-              <v-col cols="auto">
-                <v-avatar size="30" color="primary">
-                  <v-icon class="text-center" style="color: white">{{icons.mdiChevronDoubleDown}}</v-icon>
-                </v-avatar>
-              </v-col>
-              <v-col></v-col>
-              <v-col cols="6" class="ml-3"></v-col>
-            </v-row>
-            <v-row dense>
-              <v-col style="max-width: 1000px !important">
+              <v-col style="max-width: 1200px !important">
                 <v-card outlined shaped elevation="2" class="mr-2">
-                  <v-toolbar shaped :class="moves[0].options[0].move.type + ' option-toolbar'" style="color: white; border-bottom-right-radius: 0; max-width: 1000px !important" elevation="1" dense>
-                    <v-row dense class="fill-height pl-0" style="max-width: 1000px !important">
+                  <v-toolbar shaped :class="moves[0].options[0].move.type + ' option-toolbar'" style="color: white; border-bottom-right-radius: 0; max-width: 1200px !important" elevation="1" dense>
+                    <v-row dense class="fill-height pl-0" style="max-width: 1200px !important">
                       <template v-for="(option, index) in moves[0].options">
                         <v-col cols="auto" v-if="index > 0" class="pa-0 ma-0" :key="`move-0-option-${index}-tool-divider`" style="width: 1px !important; background: black !important;">
                         </v-col>
@@ -397,64 +375,64 @@
                             <img v-if="option.move.type" :src="`https://cdn.statically.io/gh/MicDeVilla/pokemon-unite-designer/master/public/img/${option.move.type}.webp`" />
                           </v-avatar>
                           <div style="margin-top: -8px">
-                            <h3 style="padding: none !important">{{option.move.name}}</h3>
+                            <h3 style="padding: none !important">Move 1 Option: {{option.move.name}}</h3>
                             <div style="height: 20px; margin-top: -8px; margin-bottom: 4px !important">
                               <v-chip color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon small class="pb-1">{{icons.mdiTimerOutline}}</v-icon>
                                   {{option.cooldown}}s
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Melee')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon x-small class="pb-1">{{icons.mdiHandFrontLeftOutline}}</v-icon>
                                   Melee
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Ranged')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon x-small class="pb-1">{{icons.mdiBowArrow}}</v-icon>
                                   Ranged
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Area')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon small class="pb-1">{{icons.mdiArrowExpandAll}}</v-icon>
                                   Area
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Buff')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon small class="pb-1">{{icons.mdiChevronDoubleUp}}</v-icon>
                                   Buff
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Debuff')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon small class="pb-1">{{icons.mdiChevronDoubleDown}}</v-icon>
                                   Debuff
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Dash')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon small class="pb-1">{{icons.mdiShare}}</v-icon>
                                   Dash
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Hindrance')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon small class="pb-1">{{icons.mdiLinkVariant}}</v-icon>
                                   Hindrance
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Recovery')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon small class="pb-1">{{icons.mdiBottleTonicPlusOutline}}</v-icon>
                                   Recovery
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Sure Hit')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon small class="pb-1">{{icons.mdiTarget}}</v-icon>
                                   Sure Hit
                                 </div>
@@ -465,12 +443,12 @@
                       </template>
                     </v-row>
                   </v-toolbar>
-                  <v-row class="full-width pl-3" style="max-width: 994px !important">
+                  <v-row class="full-width pl-3" style="max-width: 1125px !important">
                     <template v-for="(option, index) in moves[0].options">
                       <!-- <v-col cols="auto" v-if="index > 0" class="pa-0 ma-0" :key="`move-0-option-${index}-desc-divider`" style="width: 1px !important; background: black !important;">
                       </v-col> -->
                       <v-col :key="`move-0-option-${index}-description`" :style="index > 0? {borderLeft: '1px solid black !important'}: {}" class="mb-3">
-                        <div style="height: 7em; font-size: 14px !important; line-height: 15px" class="">
+                        <div style="height: 9em; font-size: 12px !important; line-height: 12px" class="">
                           {{option.description}}
                         </div>
                       </v-col>
@@ -481,71 +459,71 @@
             </v-row>
             <v-divider class="my-5" color="black"></v-divider>
             <v-row dense>
-              <v-col style="max-width: 495px !important">
+              <v-col style="max-width: 595px !important">
                 <v-card outlined shaped elevation="2" class="mr-3">
                   <v-toolbar shaped :class="moves[1].move.type" style="color: white; border-bottom-right-radius: 0" elevation="1" dense>
                     <v-avatar color="white" size="32" class="mr-2">
                       <img v-if="moves[1].move.type" :src="`https://cdn.statically.io/gh/MicDeVilla/pokemon-unite-designer/master/public/img/${moves[1].move.type}.webp`" />
                     </v-avatar>
                     <div style="margin-top: -8px">
-                      <h3 style="padding: none !important">{{moves[1].move.name}}</h3>
+                      <h3 style="padding: none !important">Move 2: {{moves[1].move.name}}</h3>
                       <div style="height: 20px; margin-top: -8px; margin-bottom: 4px !important">
                         <v-chip color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon small class="pb-1">{{icons.mdiTimerOutline}}</v-icon>
                             {{moves[1].cooldown}}s
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[1].tags.includes('Melee')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon x-small class="pb-1">{{icons.mdiHandFrontLeftOutline}}</v-icon>
                             Melee
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[1].tags.includes('Ranged')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon x-small class="pb-1">{{icons.mdiBowArrow}}</v-icon>
                             Ranged
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[1].tags.includes('Area')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon small class="pb-1">{{icons.mdiArrowExpandAll}}</v-icon>
                             Area
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[1].tags.includes('Buff')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon small class="pb-1">{{icons.mdiChevronDoubleUp}}</v-icon>
                             Buff
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[1].tags.includes('Debuff')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon small class="pb-1">{{icons.mdiChevronDoubleDown}}</v-icon>
                             Debuff
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[1].tags.includes('Dash')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon small class="pb-1">{{icons.mdiShare}}</v-icon>
                             Dash
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[1].tags.includes('Hindrance')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon small class="pb-1">{{icons.mdiLinkVariant}}</v-icon>
                             Hindrance
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[1].tags.includes('Recovery')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon small class="pb-1">{{icons.mdiBottleTonicPlusOutline}}</v-icon>
                             Recovery
                           </div>
                         </v-chip>
                         <v-chip v-if="moves[1].tags.includes('Sure Hit')" color="primary" class="mr-2" label x-small style="height: 20px">
-                          <div style="font-size: 14px !important">
+                          <div style="font-size: 12px !important">
                             <v-icon small class="pb-1">{{icons.mdiTarget}}</v-icon>
                             Sure Hit
                           </div>
@@ -553,12 +531,12 @@
                       </div>
                     </div>
                   </v-toolbar>
-                  <div style="height: 7em; font-size: 14px !important; line-height: 15px" class="pa-2">
+                  <div style="height: 10em; font-size: 12px !important; line-height: 12px" class="pa-2">
                     {{moves[1].description}}
                   </div>
                 </v-card>
               </v-col>
-              <v-col style="max-width: 495px !important">
+              <v-col style="max-width: 595px !important">
                 <v-card outlined shaped elevation="2" class="ml-3">
                   <v-toolbar shaped color="primary" style="color: white; border-bottom-right-radius: 0" elevation="1" dense>
                     <v-avatar color="white" size="32" class="mr-2">
@@ -568,106 +546,84 @@
                     </v-avatar>
                     <h3 style="padding: none !important">Unite Move: {{uniteMove.name}}</h3>
                   </v-toolbar>
-                  <div style="height: 7em; font-size: 14px !important; line-height: 15px" class="pa-2">
+                  <div style="height: 10em; font-size: 12px !important; line-height: 12px" class="pa-2">
                     {{uniteMove.description}}
                   </div>
                 </v-card>
               </v-col>
             </v-row>
             <v-row dense>
-              <v-col></v-col>
-              <v-col cols="auto">
-                <v-avatar size="30" color="primary">
-                  <v-icon class="text-center" style="color: white">{{icons.mdiChevronDoubleDown}}</v-icon>
-                </v-avatar>
-              </v-col>
-              <v-col></v-col>
-              <v-col cols="auto">
-                <v-avatar size="30" color="primary">
-                  <v-icon class="text-center" style="color: white">{{icons.mdiChevronDoubleDown}}</v-icon>
-                </v-avatar>
-              </v-col>
-              <v-col></v-col>
-              <v-col cols="auto">
-                <v-avatar size="30" color="primary">
-                  <v-icon class="text-center" style="color: white">{{icons.mdiChevronDoubleDown}}</v-icon>
-                </v-avatar>
-              </v-col>
-              <v-col></v-col>
-              <v-col cols="6" class="ml-3"></v-col>
-            </v-row>
-            <v-row dense>
-              <v-col style="max-width: 1000px !important">
+              <v-col style="max-width: 1200px !important">
                 <v-card outlined shaped elevation="2" class="mr-2">
-                  <v-toolbar shaped :class="moves[1].options[0].move.type + ' option-toolbar'" style="color: white; border-bottom-right-radius: 0; max-width: 1000px !important" elevation="1" dense>
-                    <v-row dense class="fill-height pl-0" style="max-width: 1000px !important">
+                  <v-toolbar shaped :class="moves[1].options[0].move.type + ' option-toolbar'" style="color: white; border-bottom-right-radius: 0; max-width: 1200px !important" elevation="1" dense>
+                    <v-row dense class="fill-height pl-0" style="max-width: 1200px !important">
                       <template v-for="(option, index) in moves[1].options">
                         <v-col cols="auto" v-if="index > 0" class="pa-0 ma-0" :key="`move-1-option-${index}-tool-divider`" style="width: 1px !important; background: black !important">
-                          <!-- <v-avatar color="primary" size="24" style="margin-left: -12px; margin-right: -12px; z-index: 10; margin-top: 12px; font-size: 14px">OR</v-avatar> -->
+                          <!-- <v-avatar color="primary" size="24" style="margin-left: -12px; margin-right: -12px; z-index: 10; margin-top: 12px; font-size: 12px">OR</v-avatar> -->
                         </v-col>
                         <v-col :key="`move-1-option-${index}-tool`" :class="`v-toolbar__content ma-0 pa-0  ${option.move.type}`">
                           <v-avatar color="white" size="32" class="mr-2">
                             <img v-if="option.move.type" :src="`https://cdn.statically.io/gh/MicDeVilla/pokemon-unite-designer/master/public/img/${option.move.type}.webp`" />
                           </v-avatar>
                           <div style="margin-top: -8px">
-                            <h3 style="padding: none !important">{{option.move.name}}</h3>
+                            <h3 style="padding: none !important">Move 2 Option: {{option.move.name}}</h3>
                             <div style="height: 20px; margin-top: -8px; margin-bottom: 4px !important">
                               <v-chip color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon small class="pb-1">{{icons.mdiTimerOutline}}</v-icon>
                                   {{option.cooldown}}s
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Melee')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon x-small class="pb-1">{{icons.mdiHandFrontLeftOutline}}</v-icon>
                                   Melee
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Ranged')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon x-small class="pb-1">{{icons.mdiBowArrow}}</v-icon>
                                   Ranged
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Area')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon small class="pb-1">{{icons.mdiArrowExpandAll}}</v-icon>
                                   Area
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Buff')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon small class="pb-1">{{icons.mdiChevronDoubleUp}}</v-icon>
                                   Buff
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Debuff')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon small class="pb-1">{{icons.mdiChevronDoubleDown}}</v-icon>
                                   Debuff
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Dash')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon small class="pb-1">{{icons.mdiShare}}</v-icon>
                                   Dash
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Hindrance')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon small class="pb-1">{{icons.mdiLinkVariant}}</v-icon>
                                   Hindrance
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Recovery')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon small class="pb-1">{{icons.mdiBottleTonicPlusOutline}}</v-icon>
                                   Recovery
                                 </div>
                               </v-chip>
                               <v-chip v-if="option.tags.includes('Sure Hit')" color="primary" class="mr-2" label x-small style="height: 20px">
-                                <div style="font-size: 14px !important">
+                                <div style="font-size: 12px !important">
                                   <v-icon small class="pb-1">{{icons.mdiTarget}}</v-icon>
                                   Sure Hit
                                 </div>
@@ -678,10 +634,10 @@
                       </template>
                     </v-row>
                   </v-toolbar>
-                  <v-row class="full-width pl-3" style="max-width: 994px !important">
+                  <v-row class="full-width pl-3" style="max-width: 1125px !important">
                     <template v-for="(option, index) in moves[1].options">
                       <v-col :key="`move-1-option-${index}-description`" :style="index > 0? {borderLeft: '1px solid black !important'}: {}" class="mb-3">
-                        <div style="height: 7em; font-size: 14px !important; line-height: 15px" class="pa-2">
+                        <div style="height: 9em; font-size: 12px !important; line-height: 12px" class="pa-2">
                           {{option.description}}
                         </div>
                       </v-col>
